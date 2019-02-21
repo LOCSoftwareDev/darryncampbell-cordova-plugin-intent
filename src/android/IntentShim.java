@@ -544,9 +544,6 @@ public class IntentShim extends CordovaPlugin {
             } else if (key.equals(Intent.EXTRA_EMAIL)) {
                 // allows to add the email address of the receiver
                 i.putExtra(Intent.EXTRA_EMAIL, new String[] { valueStr });
-            } else if (key.equals("clover.intent.extra.AMOUNT")) {
-                //Clover requires a Long value.
-                i.putExtra(key, Long.parseLong(value));
             } else {
                 if (value instanceof Boolean) {
                     i.putExtra(key, Boolean.valueOf(valueStr));
